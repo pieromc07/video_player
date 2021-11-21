@@ -1,0 +1,143 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+:root {
+	--primary: #efeff0;
+	--white: #ffffff;
+	--black: #333333;
+	--bg: #c3c3c3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+	background: var(--primary);
+	font-family: "Play", sans-serif;
+	font-size: 16px;
+}
+
+.container {
+	max-inline-size: 95vw;
+	margin: 0 auto;
+}
+
+.container .title {
+	font-size: 1.8rem;
+	color: var(--black);
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.container .video-container {
+	display: block;
+	width: 100%;
+	background-color: var(--white);
+	padding-bottom: 0.5rem;
+	border-radius: 0.3rem;
+}
+.video-container video {
+	width: 100%;
+	height: auto;
+}
+
+.container .video-container .description {
+	color: var(--black);
+	margin: 0.5rem 0;
+}
+.container .video-container .description .video_title {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0 0.5rem;
+}
+
+.container .playlist-container {
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	background-color: var(--white);
+	border-radius: 0.3rem;
+}
+.container .playlist-container .playlist {
+	display: block;
+}
+.container .playlist-container .playlist .playlist_title {
+	font-size: 1.4rem;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	border-bottom: 2px solid var(--bg);
+}
+
+.container .playlist-container .playlist .playlist_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container .playlist-container .playlist .playlist_list .playlist_item {
+	display: flex;
+	width: 100%;
+	height: 5rem;
+	padding: 0.5rem;
+	margin: 0 0.5rem;
+	border-bottom: 1px solid var(--bg);
+  cursor: pointer;
+}
+.container .playlist-container .playlist .playlist_list .playlist_item img {
+	width: 100px;
+	height: 100%;
+}
+
+.container
+	.playlist-container
+	.playlist
+	.playlist_list
+	.playlist_item
+	.item_description {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 0.3rem;
+	padding: 0.3rem;
+}
+
+.container
+	.playlist-container
+	.playlist
+	.playlist_list
+	.playlist_item
+	.item_description
+	.item_title {
+	width: 100%;
+  line-height: 1.1rem;
+	font-size: 1rem;
+	color: var(--black);
+  }
+.container
+	.playlist-container
+	.playlist
+	.playlist_list
+	.playlist_item
+	.item_description
+	.item_time {
+	font-size: 0.8rem;
+	font-weight: bold;
+  color: var(--bg);
+}
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--white);
+	color: var(--black);
+	padding: 0.5rem;
+	font-size: 1rem;
+}
+.footer strong {
+	color: var(--black);
+}
