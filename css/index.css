@@ -1,7 +1,7 @@
 /** @format */
 @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
 :root {
-	--primary: #efeff0;
+	--primary: #5353b1;
 	--white: #ffffff;
 	--black: #333333;
 	--bg: #c3c3c3;
@@ -30,23 +30,24 @@ body {
 	margin: 0 auto;
 }
 
-.container .title {
+.title {
 	font-size: 1.8rem;
 	color: var(--black);
 	text-align: center;
+	color: var(--white);
 	margin: 1rem 0;
 }
 
 .container .video-container {
 	display: block;
 	width: 100%;
+	height: auto;
 	background-color: var(--white);
-	padding-bottom: 0.5rem;
 	border-radius: 0.3rem;
 }
 .video-container video {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .container .video-container .description {
@@ -86,7 +87,7 @@ body {
 	padding: 0.5rem;
 	margin: 0 0.5rem;
 	border-bottom: 1px solid var(--bg);
-  cursor: pointer;
+	cursor: pointer;
 }
 .container .playlist-container .playlist .playlist_list .playlist_item img {
 	width: 100px;
@@ -113,10 +114,10 @@ body {
 	.item_description
 	.item_title {
 	width: 100%;
-  line-height: 1.1rem;
+	line-height: 1.1rem;
 	font-size: 1rem;
 	color: var(--black);
-  }
+}
 .container
 	.playlist-container
 	.playlist
@@ -126,7 +127,7 @@ body {
 	.item_time {
 	font-size: 0.8rem;
 	font-weight: bold;
-  color: var(--bg);
+	color: var(--bg);
 }
 
 .footer {
@@ -140,4 +141,59 @@ body {
 }
 .footer strong {
 	color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: initial;
+		position: relative;
+		width: 100vw;
+		height: calc(100vh - 100px);
+		margin: 0.5rem auto;
+	}
+	.title {
+		width: 100%;
+		height: 10px;
+	}
+	.container .video-container {
+		display: inline-block;
+		max-width: 63.33%;
+		height: 100%;
+	}
+	.video-container video {
+		width: 100%;
+	}
+
+	.container .playlist-container {
+		display: inline-block;
+		max-width: 33.33%;
+		height: calc(100%-40px);
+		margin: 0;
+	}
+	.footer {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		height: 60px;
+	}
+	.sociales {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.sociales .item_social {
+		border: 1px solid red;
+		margin-left: 1rem;
+		color: var(--black);
+		font-size: 1.2rem;
+	}
+	.sociales .item_social a {
+		color: var(--black);
+	}
+	.sociales .item_social a:hover {
+		color: red;
+	}
 }
