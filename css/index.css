@@ -89,6 +89,10 @@ body {
 	border-bottom: 1px solid var(--bg);
 	cursor: pointer;
 }
+.container .playlist-container .playlist .playlist_list .playlist_item:hover .item_description
+.item_time {
+	color: var(--primary);
+}
 .container .playlist-container .playlist .playlist_list .playlist_item img {
 	width: 100px;
 	height: 100%;
@@ -132,17 +136,34 @@ body {
 
 .footer {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 	background-color: var(--white);
 	color: var(--black);
-	padding: 0.5rem;
-	font-size: 1rem;
+	padding: 1rem 0.5rem;
+	text-align: center;
+}
+.footer p{
+	width: 100%;
+	margin-bottom: 5px;
 }
 .footer strong {
+	color: var(--primary);
+}
+.sociales{
+	display: flex;
+	width: 30%;
+	justify-content: space-between;
+	margin: auto;
+}
+.sociales .item_social a{
+	font-size: 1.2rem;
 	color: var(--black);
 }
-
+.sociales .item_social a:hover{
+	color: var(--primary);
+}
 @media screen and (min-width: 768px) {
 	.container {
 		display: flex;
@@ -151,12 +172,12 @@ body {
 		align-items: initial;
 		position: relative;
 		width: 100vw;
-		height: calc(100vh - 100px);
+		height: auto;
 		margin: 0.5rem auto;
 	}
 	.title {
 		width: 100%;
-		height: 10px;
+		height: auto;
 	}
 	.container .video-container {
 		display: inline-block;
@@ -165,6 +186,7 @@ body {
 	}
 	.video-container video {
 		width: 100%;
+		height: 100%;
 	}
 
 	.container .playlist-container {
@@ -177,23 +199,16 @@ body {
 		width: 100%;
 		position: fixed;
 		bottom: 0;
-		height: 60px;
+		height: auto;
+		padding: 1rem 0.5rem;
+		flex-wrap: nowrap;
 	}
-	.sociales {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+	.footer p{
+		width: 30%;
+		margin: 0 0 0 auto;
 	}
-	.sociales .item_social {
-		border: 1px solid red;
-		margin-left: 1rem;
-		color: var(--black);
-		font-size: 1.2rem;
-	}
-	.sociales .item_social a {
-		color: var(--black);
-	}
-	.sociales .item_social a:hover {
-		color: red;
-	}
+	.sociales {	
+		width: 10%;
+		margin: 0 auto 0 0;
+	} 
 }
