@@ -7,6 +7,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png">
 	<link rel="stylesheet" href="./css/index.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -18,6 +19,21 @@
 	<div class="container">
 		<h1 class="title">Video Player</h1>
 		<div class="video-container" id="video-container">
+			<video id="video-play" autoplay></video>
+			<div class="video-overlay">
+				<h2 id="video-title" class="video-title"></h2>
+				<div class="video-actions">
+					<button class="video-button" id="backward" aria-label="back 10 seconds"
+						title="atras 10 segundos"></button>
+					<button class="video-button hidden" id="play" aria-label="play" title="play"></button>
+					<button class="video-button " id="pause" aria-label="pause" title="pause"></button>
+					<button class="video-button" id="forward" aria-label="forward 10 seconds"
+						title="adelantar 10 segundos"></button>
+				</div>
+				<div class="video-progress">
+					<input type="range" min="0" value="0" id="progress">
+				</div>
+			</div>
 		</div>
 		<div class="playlist-container">
 			<div class="playlist">
@@ -43,14 +59,11 @@
 			</li>
 		</ul>
 	</footer>
-	<script type="module" src="./js/index.js"></script>
-	<script >
-		function playvideo(index) {
-			const vidoplay = document.getElementById("video-container");
-			const video = document.getElementById(index);
-			const url = video.children[0].textContent;
-			vidoplay.innerHTML = `<video id="video" class="video" autoplay controls src="${url}"></video>`;
-		}
+	<script type="text/javascript" src="./js/index.js" async="async"></script>
+	<script type="text/javascript">
+
+
+
 	</script>
 </body>
 
